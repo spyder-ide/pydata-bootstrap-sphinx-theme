@@ -42,4 +42,21 @@ $(document).ready(() => {
     document.addEventListener('keydown', initPageNav);
     keyboardListener = true;
   }
+  var select_options = $('#small-dropdown option');
+  if(select_options.length) {
+    select_options.removeAttr('selected').filter('[value=""]').attr('selected', true);
+  } else {
+    $('#small-dropdown').hide();
+    $('#topics-header').hide();
+  }
+});
+
+$('#small-dropdown').click(function() {
+  var open = $(this).data('isopen');
+  if(open && $(this).val()) {
+    window.location.href = $(this).val();
+  }
+  //set isopen to opposite so next time when use clicked select box
+  //it wont trigger this event
+  $(this).data('isopen', !open);
 });
