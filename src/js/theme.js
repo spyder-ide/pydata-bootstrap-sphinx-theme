@@ -42,4 +42,22 @@ $(document).ready(() => {
     document.addEventListener('keydown', initPageNav);
     keyboardListener = true;
   }
+  var select_options = $('#small-dropdown option');
+  if(select_options.length) {
+    select_options.removeAttr('selected').filter('[value=""]').attr('selected', true);
+  } else {
+    $('#small-dropdown').hide();
+    $('#topics-header').hide();
+  }
+});
+
+// Based on https://stackoverflow.com/a/37796085
+$('#small-dropdown').click(function() {
+  var open = $(this).data('isopen');
+  if(open && $(this).val()) {
+    window.location.href = $(this).val();
+  }
+  //Set 'isopen' to the opposite so next time when select box is clicked
+  //it won't trigger the redirection to a new page
+  $(this).data('isopen', !open);
 });

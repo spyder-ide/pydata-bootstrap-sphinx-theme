@@ -1,5 +1,9 @@
 @import './sphinx-bootstrap';
 
+#small-dropdown, #topics-header {
+  margin: 0 10px;
+}
+
 .navbar-brand img {
   max-height: 50px;
   width: auto;
