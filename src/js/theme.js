@@ -51,12 +51,13 @@ $(document).ready(() => {
   }
 });
 
+// Based on https://stackoverflow.com/a/37796085
 $('#small-dropdown').click(function() {
   var open = $(this).data('isopen');
   if(open && $(this).val()) {
     window.location.href = $(this).val();
   }
-  //set isopen to opposite so next time when use clicked select box
-  //it wont trigger this event
+  //Set 'isopen' to the opposite so next time when select box is clicked
+  //it won't trigger the redirection to a new page
   $(this).data('isopen', !open);
 });
