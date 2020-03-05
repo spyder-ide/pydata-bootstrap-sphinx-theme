@@ -35,7 +35,7 @@
 {% block sidebarsourcelink %}{% endblock %}
 
 {% block body_tag %}
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+  <body data-spy="scroll" data-target="" data-offset="60">
 {%- endblock %}
 {%- block content %}
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
@@ -48,12 +48,6 @@
               {%- include "docs-sidebar.html" %}
           </div>
 
-          <div class="d-none d-xl-block col-xl-2 bd-toc">
-              {% if not (meta is not none and 'notoc' in meta) %}
-                {%- include "docs-toc.html" %}
-              {% endif %}
-            </div>
-
           <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content" role="main">
               <div>
                 {% block body %} {% endblock %}
@@ -65,6 +59,11 @@
               {% endif %}
           </main>
 
+          <div class="col-xl-2">
+              {% if not (meta is not none and 'notoc' in meta) %}
+                  {%- include "docs-toc.html" %}
+              {% endif %}
+          </div>
       </div>
     </div>
 
