@@ -66,6 +66,10 @@
   }
 }
 
+  .nav-bd-toc{
+    position: unset;
+  }
+
 .section-nav {
   padding-left: 0;
   border-left: 1px solid #eee;
@@ -383,4 +387,9 @@ div {
   &.editthispage {
     padding-bottom: 0.6rem;
   }
+}
+
+/* Select sidebar wrapping */
+#small-dropdown, #small-dropdown option {
+  width: 90%;
 }
