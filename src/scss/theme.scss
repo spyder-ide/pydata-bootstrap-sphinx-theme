@@ -70,9 +70,13 @@
   position: unset;
 }
 
+.shadows {
+  box-shadow: 3rem 1rem 3rem rgb(0, 0, 0) !important;
+}
+
 #navbar-toc {
   overflow-y: scroll !important;
-  max-height: 30%;
+  max-height: 45%;
 }
 
 .section-nav {
