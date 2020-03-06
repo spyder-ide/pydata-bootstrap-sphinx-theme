@@ -66,9 +66,14 @@
   }
 }
 
-  .nav-bd-toc{
-    position: unset;
-  }
+.nav-bd-toc{
+  position: unset;
+}
+
+#navbar-toc {
+  overflow-y: scroll !important;
+  max-height: 30%;
+}
 
 .section-nav {
   padding-left: 0;
