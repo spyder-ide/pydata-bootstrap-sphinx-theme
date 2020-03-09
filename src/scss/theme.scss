@@ -66,6 +66,19 @@
   }
 }
 
+.nav-bd-toc{
+  position: unset;
+}
+
+.shadows {
+  box-shadow: 0.25rem 0.125rem 0.25rem 0.25rem rgba(0, 0, 0, 0.11);
+}
+
+#navbar-toc {
+  overflow-y: scroll !important;
+  max-height: 45%;
+}
+
 .section-nav {
   padding-left: 0;
   border-left: 1px solid #eee;
@@ -383,4 +396,9 @@ div {
   &.editthispage {
     padding-bottom: 0.6rem;
   }
+}
+
+/* Select sidebar wrapping */
+#small-dropdown, #small-dropdown option {
+  width: 90%;
 }

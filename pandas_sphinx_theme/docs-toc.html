@@ -1,20 +1,50 @@
 {% set page_toc = get_page_toc_object() %}
 
-{% include "edit_this_page.html" %}
-{%- if page_toc.children | length > 1 %}
-<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
-{% endif -%}
-<nav id="bd-toc-nav">
-    <ul class="nav section-nav flex-column">
-    {% for item in page_toc.children recursive %}
-        <li class="nav-item toc-entry toc-h{{ loop.depth + 1 }}">
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-        {%- if item.children -%}
+<div class="row d-none d-xl-block bd-toc">
+    {% include "edit_this_page.html" %}
+    {%- if page_toc.children | length > 1 %}
+    <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
+    {% endif -%}
+
+    <nav id="bd-toc-nav">
+        <ul class="nav section-nav flex-column">
+        {% for item in page_toc.children recursive %}
+            <li class="nav-item toc-entry toc-h{{ loop.depth + 1 }}">
+                <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            {%- if item.children -%}
+                <ul class="nav section-nav flex-column">
+                    {{ loop(item.children) }}
+                </ul>
+            {%- endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    </nav>
+</div>
+
+<div class="row d-block d-xl-none bd-toc nav-bd-toc">
+    {%- if page_toc.children | length >= 1 %}
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-0 shadows rounded" id="navbar-toc">
+        <div >On this page</div>
+        {%- if page_toc.children | length >= 1 %}
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars fa-2"></span>
+            </button>
+        {% endif -%}
+        <div id="bd-toc-nav-small" class="collapse navbar-collapse ">
             <ul class="nav section-nav flex-column">
-                {{ loop(item.children) }}
+            {% for item in page_toc.children recursive %}
+                <li class="nav-item toc-entry toc-h{{ loop.depth + 1 }}" data-target="#bd-toc-nav-small" data-toggle="collapse">
+                    <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+                {%- if item.children -%}
+                    <ul class="nav section-nav flex-column">
+                        {{ loop(item.children) }}
+                    </ul>
+                {%- endif %}
+                </li>
+            {% endfor %}
             </ul>
-        {%- endif %}
-        </li>
-    {% endfor %}
-    </ul>
-</nav>
+        </div>
+    </nav>
+    {% endif -%}
+</div>
