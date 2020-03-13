@@ -28,7 +28,7 @@
 
   > .active > .nav-link {
     font-weight: 600;
-    color: #130654 !important;
+    color: #ee1c24 !important;
   }
 }
 
@@ -111,14 +111,9 @@
 .bd-sidebar {
   -ms-flex-order: 0;
   order: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
-  .bd-sidebar {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
   @supports (position: -webkit-sticky) or (position: sticky) {
     .bd-sidebar {
       position: -webkit-sticky;
@@ -215,7 +210,7 @@
     > a,
     &:hover > a {
       font-weight: 600;
-      color: #130654;
+      color: #ee1c24;
 
       /* adjusted from original
         color: rgba(0, 0, 0, 0.85);
@@ -281,9 +276,9 @@ body {
 
 .toc-entry > .nav-link.active {
   font-weight: 600;
-  color: #130654;
+  color: #ee1c24;
   background-color: transparent;
-  border-left: 2px solid #563d7c;
+  border-left: 2px solid #ee1c24;
 }
 
 .nav-link:hover {
@@ -294,20 +289,6 @@ body {
   font-size: 0.7rem;
   padding-left: 2px;
   vertical-align: middle;
-}
-
-/* Collapsing of the TOC sidebar while scrolling */
-
-/* Nav: hide second level (shown on .active) */
-
-.bd-toc .nav {
-  .nav {
-    display: none;
-  }
-
-  > .active > ul {
-    display: block;
-  }
 }
 
 /* Previous / Next buttons */
@@ -405,4 +386,10 @@ div {
 /* Select sidebar wrapping */
 #small-dropdown, #small-dropdown option {
   width: 90%;
+}
+
+/* Big divs wrapping */
+div .section {
+  overflow: auto;
+  overflow-y: hidden;
 }

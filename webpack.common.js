@@ -7,6 +7,7 @@ module.exports = {
     theme: [
       './src/js/theme.js',
       './src/scss/theme.scss',
+      './src/scss/spyder.scss',
     ],
     // badge_only: './src/sass/badge_only.sass',
   },
