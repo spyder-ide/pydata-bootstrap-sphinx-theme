@@ -85,7 +85,6 @@
 
 .section-nav {
   padding-left: 0;
-  border-left: 1px solid #eee;
   border-bottom: none;
 
   ul {
@@ -111,6 +110,7 @@
 .bd-sidebar {
   -ms-flex-order: 0;
   order: 0;
+  border-right: 1px solid #eee;
 }
 
 @media (min-width: 768px) {
@@ -211,6 +211,7 @@
     &:hover > a {
       font-weight: 600;
       color: #ee1c24;
+      border-left: 1px solid #ee1c24;
 
       /* adjusted from original
         color: rgba(0, 0, 0, 0.85);
@@ -369,7 +370,6 @@ i {
 
 .tocsection {
   padding-left: 10px;
-  border-left: 1px solid #eee;
   padding: 0.3rem 1.5rem;
 }
 
