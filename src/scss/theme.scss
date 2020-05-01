@@ -1,7 +1,11 @@
 @import './sphinx-bootstrap';
 
-#small-dropdown, #topics-header {
+#topics-header {
   margin: 0 10px;
+}
+
+#small-dropdown {
+  margin: 10px;
 }
 
 #navbar-menu{
