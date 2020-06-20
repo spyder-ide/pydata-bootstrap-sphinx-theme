@@ -46,6 +46,15 @@
   border: none;
 }
 
+.navbar-toggler:hover {
+  border: 1px solid #ee1c24;
+  color: #ee1c24;
+}
+
+.navbar-light .navbar-toggler-icon:hover{
+  background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgb(238, 28, 36)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
 .bd-search {
   position: relative;
   padding: 1rem 15px;
@@ -313,6 +322,10 @@ div.prev-next-bottom {
       max-width: 45%;
       overflow-x: hidden;
       color: rgba(0, 0, 0, 0.65);
+    }
+    &.left-prev:hover,
+    &.right-next:hover {
+      color: white;
     }
 
     &.left-prev {

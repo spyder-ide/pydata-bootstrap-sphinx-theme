@@ -23,11 +23,10 @@
 </div>
 
 <div class="row d-block d-xl-none bd-toc nav-bd-toc">
-    {%- if page_toc.children | length >= 1 %}
-    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-0 shadows rounded d-flex justify-content-center" id="navbar-toc">
-        <a class="navbar-toggler btn-outline-danger" href="{{ pathto('search') }}"><span class="fas fa-search"></span></a>
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
+        <a class="navbar-toggler btn-outline-default" href="{{ pathto('search') }}"><span class="fas fa-search"></span></a>
         {%- if page_toc.children | length >= 1 %}
-            <button class="navbar-toggler btn-outline-danger" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler btn-outline-default" type="button" data-toggle="collapse" data-target="#bd-toc-nav-small" aria-controls="bd-toc-nav-small" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="fa fa-bars fa-2"></span>
             </button>
         {% endif -%}
@@ -46,5 +45,4 @@
             </ul>
         </div>
     </nav>
-    {% endif -%}
 </div>

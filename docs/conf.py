@@ -64,8 +64,6 @@ html_theme_options = {
             "name": "Pandas Docs"
         }
     ],
-    "github_url": "https://github.com/pandas-dev/pandas-sphinx-theme",
-    "twitter_url": "https://twitter.com/pandas_dev",
     "use_edit_page_button": True
 }
 
