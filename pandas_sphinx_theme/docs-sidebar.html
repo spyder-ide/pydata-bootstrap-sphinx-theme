@@ -1,8 +1,16 @@
 
-
-<form class="bd-search d-flex align-items-center" action="{{ pathto('search') }}" method="get">
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
-</form>
+<div class="d-none d-xl-block">
+  <form class="bd-search d-flex align-items-center" action="{{ pathto('search') }}" method="get">
+    <div class="input-group">
+      <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
+      <div class="input-group-append">
+        <button class="btn btn-outline-danger" type="submit">
+          <span class="fas fa-search"></span>
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
 
 <nav class="bd-links d-none d-md-block d-xl-none" id="bd-docs-nav" aria-label="Main navigation">
 

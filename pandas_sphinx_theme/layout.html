@@ -4,10 +4,10 @@
 {# prev/next buttons #}
 {% macro prev_next(prev, next, prev_title='', next_title='') %}
  {%- if prev %}
-    <a class='left-prev' id="prev-link" href="{{ prev.link|e }}" title="{{ _('previous page')}}">{{ prev_title or prev.title }}</a>
+    <a class='left-prev btn btn-outline-danger' id="prev-link" href="{{ prev.link|e }}" title="{{ _('previous page')}}">{{ prev_title or prev.title }}</a>
  {%- endif %}
  {%- if next %}
-    <a class='right-next' id="next-link" href="{{ next.link|e }}" title="{{ _('next page')}}">{{ next_title or next.title }}</a>
+    <a class='right-next btn btn-outline-danger' id="next-link" href="{{ next.link|e }}" title="{{ _('next page')}}">{{ next_title or next.title }}</a>
  {%- endif %}
 {% endmacro %}
 
@@ -17,6 +17,11 @@
 
     {{- css() }}
     <link href="{{ pathto('_static/css/theme.css', 1) }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amiri">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <link rel="stylesheet" href="https://www.spyder-ide.org/static/css/style.css">
+    <link href="{{ pathto('_static/css/spyder.css', 1) }}" rel="stylesheet">
 {%- endblock %}
 
 {%- block extrahead %}
@@ -26,6 +31,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 {%- endblock %}
 
 {# Silence the sidebar's, relbar's #}
@@ -35,14 +41,14 @@
 {% block sidebarsourcelink %}{% endblock %}
 
 {% block body_tag %}
-  <body data-spy="scroll" data-target="" data-offset="60">
+  <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
 {%- endblock %}
 {%- block content %}
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
       {%- include "docs-navbar.html" %}
     </nav>
 
-    <div class="container-fluid">
+    <div id="doc-content" class="container">
       <div class="row flex-xl-nowrap">
           <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
               {%- include "docs-sidebar.html" %}
