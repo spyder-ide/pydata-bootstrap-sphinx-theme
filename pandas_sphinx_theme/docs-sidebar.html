@@ -19,27 +19,45 @@
 
   <ul class="nav bd-sidenav">
       {% for main_nav_item in nav %}
-      {% if main_nav_item.active %}
-        {% for nav_item in main_nav_item.children %}
-          {% if nav_item.children %}
-
-              <li class="{% if nav_item.active%}active{% endif %}">
-                  <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-                  <ul>
-                  {% for nav_item in nav_item.children %}
-                      <li class="{% if nav_item.active%}active{% endif %}">
-                          <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-                      </li>
+       {% if main_nav_item.children %}
+          {% if main_nav_item.active %}
+            <li class="nav-item {% if main_nav_item.active%}active{% endif %}">
+              <details open>
+                <summary>
+                    {{ main_nav_item.title }}
+                </summary>
+                <ul>
+                {% for nav_item in main_nav_item.children %}
+                    {% if nav_item.children %}
+                        <li class="{% if nav_item.active%}active{% endif %}">
+                            <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                            <ul>
+                            {% for nav_item in nav_item.children %}
+                                <li class="{% if nav_item.active%}active{% endif %}">
+                                    <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="{% if nav_item.active%}active{% endif %}">
+                            <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                        </li>
+                    {% endif %}
                   {% endfor %}
-                  </ul>
-              </li>
+                </ul>
+              </details>
+            </li>
           {% else %}
-              <li class="{% if nav_item.active%}active{% endif %}">
-                  <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-              </li>
+            <li class="nav-item {% if main_nav_item.active%}active{% endif %}">
+              <a class="nav-link" href="{{ main_nav_item.url }}">{{ main_nav_item.title }}</a>
+            </li>
           {% endif %}
-        {% endfor %}
-      {% endif %}
+        {% else %}
+            <li class="nav-item {% if main_nav_item.active%}active{% endif %}">
+              <a class="nav-link" href="{{ main_nav_item.url }}">{{ main_nav_item.title }}</a>
+            </li>
+        {% endif %}
       {% endfor %}
     </ul>
 
