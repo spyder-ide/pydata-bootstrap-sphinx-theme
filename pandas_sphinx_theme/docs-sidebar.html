@@ -69,28 +69,25 @@
   {% set nav = get_nav_object(maxdepth=3) %}
     <h4 id="topics-header">Topics</h4>
     <select id="small-dropdown" class="nav bd-sidenav">
-        {% for main_nav_item in nav %}
-        {% if main_nav_item.active %}
-          {% for nav_item in main_nav_item.children %}
-            {% if nav_item.children %}
-
-                <optgroup label="{{ nav_item.title }}">
-                    <option class="{% if nav_item.active%}active{% endif %}"
-                            value="{{ nav_item.url }}">{{ nav_item.title }}</option>
-                    {% for nav_item in nav_item.children %}
-                        <option class="{% if nav_item.active%}active{% endif %}"
-                            value="{{ nav_item.url }}">{{ nav_item.title }}
-                        </option>
-                    {% endfor %}
-                </optgroup>
-            {% else %}
-                <option class="{% if nav_item.active%}active{% endif %}"
-                        value="{{ nav_item.url }}">
-                  {{ nav_item.title }}
-                </option>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-        {% endfor %}
-      </select>
+      {% for main_nav_item in nav %}
+        {% if main_nav_item.children %}
+          <optgroup label="{{ main_nav_item.title }}">
+            <option value="{{ main_nav_item.url }}">
+               {{ main_nav_item.title }} Overview
+            </option>
+            {% for nav_item in main_nav_item.children %}
+              <option value="{{ nav_item.url }}">
+                {{ nav_item.title }}
+              </option>
+            {% endfor %}
+          </optgroup>
+        {% else %}
+          <optgroup label="{{ main_nav_item.title }}">
+            <option value="{{ main_nav_item.url }}">
+             {{ main_nav_item.title }} Overview
+            </option>
+          </optgroup>
+        {%endif%}
+      {% endfor %}
+    </select>
 </nav>
