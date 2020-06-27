@@ -69,9 +69,6 @@
       {% for main_nav_item in nav %}
         {% if main_nav_item.children %}
           <optgroup label="{{ main_nav_item.title }}">
-            <option value="{{ main_nav_item.url }}">
-               {{ main_nav_item.title }} Overview
-            </option>
             {% for nav_item in main_nav_item.children %}
               <option value="{{ nav_item.url }}">
                 {{ nav_item.title }}
@@ -79,11 +76,9 @@
             {% endfor %}
           </optgroup>
         {% else %}
-          <optgroup label="{{ main_nav_item.title }}">
             <option value="{{ main_nav_item.url }}">
-             {{ main_nav_item.title }} Overview
+             {{ main_nav_item.title }}
             </option>
-          </optgroup>
         {%endif%}
       {% endfor %}
     </select>
