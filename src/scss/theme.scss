@@ -210,7 +210,7 @@
 }
 
 .bd-sidebar .nav > {
-  li > a {
+  li > a, summary {
     display: block;
     padding: 0.25rem 1.5rem;
     font-size: 90%;
@@ -233,6 +233,11 @@
       /* adjusted from original
         color: rgba(0, 0, 0, 0.85);
         background-color: transparent; */
+    }
+
+    summary {
+      font-weight: 600;
+      color: #ee1c24;
     }
   }
 
