@@ -209,6 +209,10 @@
   }
 }
 
+summary {
+  text-transform: uppercase;
+}
+
 .bd-sidebar .nav > {
   li > a, summary {
     display: block;
@@ -221,6 +225,7 @@
       text-decoration: none;
       background-color: transparent;
     }
+    
   }
 
   .active {
