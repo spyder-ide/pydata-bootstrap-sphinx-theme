@@ -31,18 +31,18 @@
                 <ul class="nav">
                 {% for nav_item in main_nav_item.children %}
                     {% if nav_item.children %}
-                        <li class="nav-item {% if nav_item.active%}active{% endif %}">
+                        <li class="nav-item sub-nav-item {% if nav_item.active%}active{% endif %}">
                             <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
                             <ul>
                             {% for nav_item in nav_item.children %}
-                                <li class="nav-item {% if nav_item.active%}active{% endif %}">
+                                <li class="nav-item sub-nav-item {% if nav_item.active%}active{% endif %}">
                                     <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
                                 </li>
                             {% endfor %}
                             </ul>
                         </li>
                     {% else %}
-                        <li class="nav-item {% if nav_item.active%}active{% endif %}">
+                        <li class="nav-item sub-nav-item {% if nav_item.active%}active{% endif %}">
                             <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
                         </li>
                     {% endif %}
