@@ -42,6 +42,11 @@
   /* line-height: 50px; */
 }
 
+.navbar-toggler-item
+{
+  padding: 0px 20px;
+}
+
 .navbar-toggler {
   border: none;
 }
@@ -217,7 +222,6 @@ summary {
   li > a, summary {
     display: block;
     padding: 0.25rem 1.35rem;
-    font-size: 90%;
     color: rgba(0, 0, 0, 0.65);
 
     &:hover {
