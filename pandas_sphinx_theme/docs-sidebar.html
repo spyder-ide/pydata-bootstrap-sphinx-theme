@@ -16,63 +16,70 @@
 
   <div class="bd-toc-item active">
   {% set nav = get_nav_object(maxdepth=3) %}
-
   <ul class="nav bd-sidenav">
       {% for main_nav_item in nav %}
-      {% if main_nav_item.active %}
-        {% for nav_item in main_nav_item.children %}
-          {% if nav_item.children %}
-
-              <li class="{% if nav_item.active%}active{% endif %}">
-                  <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-                  <ul>
-                  {% for nav_item in nav_item.children %}
-                      <li class="{% if nav_item.active%}active{% endif %}">
-                          <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-                      </li>
+       {% if main_nav_item.children %}
+            <li class="nav-item {% if main_nav_item.active%}active{% endif %}">
+              {% if main_nav_item.active %}            
+              <details open>
+              {%else%}
+              <details>
+              {% endif %}
+                <summary>
+                    {{ main_nav_item.title }}
+                </summary>
+                <ul class="nav">
+                {% for nav_item in main_nav_item.children %}
+                    {% if nav_item.children %}
+                        <li class="nav-item sub-nav-item {% if nav_item.active%}active{% endif %}">
+                            <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                            <ul>
+                            {% for nav_item in nav_item.children %}
+                                <li class="nav-item sub-nav-item {% if nav_item.active%}active{% endif %}">
+                                    <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li class="nav-item sub-nav-item {% if nav_item.active%}active{% endif %}">
+                            <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+                        </li>
+                    {% endif %}
                   {% endfor %}
-                  </ul>
-              </li>
-          {% else %}
-              <li class="{% if nav_item.active%}active{% endif %}">
-                  <a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
-              </li>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
+                </ul>
+              </details>
+            </li>
+        {% else %}
+            <li class="nav-item {% if main_nav_item.active%}active{% endif %}">
+              <a class="nav-link" href="{{ main_nav_item.url }}">{{ main_nav_item.title }}</a>
+            </li>
+        {% endif %}
       {% endfor %}
     </ul>
 
 </nav>
 
 <nav class="d-block d-sm-block d-md-none" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active row">
-  {% set nav = get_nav_object(maxdepth=3) %}
-    <h4 id="topics-header">Topics</h4>
-    <select id="small-dropdown" class="nav bd-sidenav">
+    <div class="bd-toc-item active row">
+    {% set nav = get_nav_object(maxdepth=3) %}
+      <h4 id="topics-header">Topics</h4>
+      <select id="small-dropdown" class="nav bd-sidenav">
         {% for main_nav_item in nav %}
-        {% if main_nav_item.active %}
-          {% for nav_item in main_nav_item.children %}
-            {% if nav_item.children %}
-
-                <optgroup label="{{ nav_item.title }}">
-                    <option class="{% if nav_item.active%}active{% endif %}"
-                            value="{{ nav_item.url }}">{{ nav_item.title }}</option>
-                    {% for nav_item in nav_item.children %}
-                        <option class="{% if nav_item.active%}active{% endif %}"
-                            value="{{ nav_item.url }}">{{ nav_item.title }}
-                        </option>
-                    {% endfor %}
-                </optgroup>
-            {% else %}
-                <option class="{% if nav_item.active%}active{% endif %}"
-                        value="{{ nav_item.url }}">
+          {% if main_nav_item.children %}
+            <optgroup label="{{ main_nav_item.title }}">
+              {% for nav_item in main_nav_item.children %}
+                <option value="{{ nav_item.url }}">
                   {{ nav_item.title }}
                 </option>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
+              {% endfor %}
+            </optgroup>
+          {% else %}
+              <option value="{{ main_nav_item.url }}">
+              {{ main_nav_item.title }}
+              </option>
+          {%endif%}
         {% endfor %}
       </select>
+    </div>
 </nav>

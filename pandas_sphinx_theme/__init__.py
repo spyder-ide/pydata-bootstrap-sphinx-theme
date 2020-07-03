@@ -50,7 +50,7 @@ def update_page_context(self, pagename, templatename, ctx, event_arg):
     def get_nav_object(**kwds):
         """Return a list of nav links that can be accessed from Jinja."""
         toctree = TocTree(self.env).get_toctree_for(
-            pagename, self, collapse=True, **kwds
+            pagename, self, False, **kwds
         )
 
         # Grab all TOC links from any toctrees on the page
