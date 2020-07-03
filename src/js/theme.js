@@ -43,7 +43,10 @@ $(document).ready(() => {
     keyboardListener = true;
   }
   var select_options = $('#small-dropdown option');
-  if(select_options.length) {
+  var current_page = window.location.pathname.replace("/", "") + window.location.search;
+  var selection_length = select_options.filter(`[value="${current_page}"]`).length;
+  var empty_selection_length = select_options.filter('[value=""]').length;
+  if(select_options.length && (selection_length || empty_selection_length)) {
     select_options.removeAttr('selected').filter('[value=""]').attr('selected', true);
   } else {
     $('#small-dropdown').hide();

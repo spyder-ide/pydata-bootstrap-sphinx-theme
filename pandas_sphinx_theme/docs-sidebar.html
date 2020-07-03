@@ -61,25 +61,25 @@
 </nav>
 
 <nav class="d-block d-sm-block d-md-none" id="bd-docs-nav" aria-label="Main navigation">
-
-  <div class="bd-toc-item active row">
-  {% set nav = get_nav_object(maxdepth=3) %}
-    <h4 id="topics-header">Topics</h4>
-    <select id="small-dropdown" class="nav bd-sidenav">
-      {% for main_nav_item in nav %}
-        {% if main_nav_item.children %}
-          <optgroup label="{{ main_nav_item.title }}">
-            {% for nav_item in main_nav_item.children %}
-              <option value="{{ nav_item.url }}">
-                {{ nav_item.title }}
+    <div class="bd-toc-item active row">
+    {% set nav = get_nav_object(maxdepth=3) %}
+      <h4 id="topics-header">Topics</h4>
+      <select id="small-dropdown" class="nav bd-sidenav">
+        {% for main_nav_item in nav %}
+          {% if main_nav_item.children %}
+            <optgroup label="{{ main_nav_item.title }}">
+              {% for nav_item in main_nav_item.children %}
+                <option value="{{ nav_item.url }}">
+                  {{ nav_item.title }}
+                </option>
+              {% endfor %}
+            </optgroup>
+          {% else %}
+              <option value="{{ main_nav_item.url }}">
+              {{ main_nav_item.title }}
               </option>
-            {% endfor %}
-          </optgroup>
-        {% else %}
-            <option value="{{ main_nav_item.url }}">
-             {{ main_nav_item.title }}
-            </option>
-        {%endif%}
-      {% endfor %}
-    </select>
+          {%endif%}
+        {% endfor %}
+      </select>
+    </div>
 </nav>
