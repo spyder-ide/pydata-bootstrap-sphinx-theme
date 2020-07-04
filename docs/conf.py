@@ -64,7 +64,8 @@ html_theme_options = {
             "name": "Pandas Docs"
         }
     ],
-    "use_edit_page_button": True
+    "use_edit_page_button": True,
+    "alert_message": "The documentation is still a work in progress!"
 }
 
 html_context = {
