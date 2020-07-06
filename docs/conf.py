@@ -65,7 +65,7 @@ html_theme_options = {
         }
     ],
     "use_edit_page_button": True,
-    "alert_message": "The documentation is still a work in progress!",
+    "alert_message": "This documentation is still a work in progress!",
     "gitter_room": "pydata/pandas"
 }
 
