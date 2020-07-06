@@ -44,6 +44,11 @@
   <body data-spy="scroll" data-target="" data-offset="60" style="font-size=16px">
 {%- endblock %}
 {%- block content %}
+    {% if theme_alert_message %}
+    <div class="alert-danger text-center" role="alert">
+      <strong>{{theme_alert_message}}</strong>
+    </div>
+    {% endif %}
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
       {%- include "docs-navbar.html" %}
     </nav>

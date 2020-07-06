@@ -64,7 +64,9 @@ html_theme_options = {
             "name": "Pandas Docs"
         }
     ],
-    "use_edit_page_button": True
+    "use_edit_page_button": True,
+    "alert_message": "This documentation is still a work in progress!",
+    "gitter_room": "pydata/pandas"
 }
 
 html_context = {

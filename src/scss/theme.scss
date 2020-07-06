@@ -1,5 +1,17 @@
 @import './sphinx-bootstrap';
 
+.gitter-chat-embed{
+  z-index: 1031;
+}
+
+.gitter-open-chat-button{
+  z-index: 1031;
+}
+
+#open_chat.navbar-toggler{
+  background-color: #fff;
+}
+
 #topics-header {
   margin: 0 10px;
 }
@@ -289,7 +301,7 @@ h6::before {
 /* add padding to body to avid overlap with navbar   */
 
 body {
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 /* adjust toc font sizes to improve overview */
