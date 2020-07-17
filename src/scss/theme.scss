@@ -28,6 +28,7 @@
   max-height: 50px;
   width: auto;
   height: 3rem;
+  margin-bottom: 0rem;
 }
 
 .navbar-light {
@@ -228,20 +229,25 @@
 
 summary {
   text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+#bd-docs-nav .nav-link {
+  text-transform: uppercase;
+  padding: .5rem 1rem !important;
 }
 
 .bd-sidebar .nav > {
   li > a, summary {
     display: block;
-    padding: 0.25rem 1.35rem;
     color: rgba(0, 0, 0, 0.65);
-
+    font-size: 0.8rem;
+    padding: 0.25rem 1.2rem;
     &:hover {
       color: rgba(0, 0, 0, 0.85);
       text-decoration: none;
       background-color: transparent;
     }
-    
   }
 
   .active {
@@ -392,11 +398,18 @@ div.prev-next-bottom {
 /* Header Styling */
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.75rem;
+  margin-top: 0.3em;
+}
+
+/* Img Styling */
+
+img {
+  margin-bottom: 1.5rem;
 }
 
 /* Social media buttons */
