@@ -66,7 +66,11 @@ html_theme_options = {
     ],
     "use_edit_page_button": True,
     "alert_message": "This documentation is still a work in progress!",
-    "gitter_room": "pydata/pandas"
+    "gitter_room": "pydata/pandas",
+    "open_collective": "pandas",
+    "show_powered_by": True,
+    "github_url": "https://github.com/pandas-dev/pandas",
+    "twitter_url": "https://twitter.com/pandas_dev"
 }
 
 html_context = {

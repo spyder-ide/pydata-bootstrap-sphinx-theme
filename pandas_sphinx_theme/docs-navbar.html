@@ -20,21 +20,5 @@
         </li>
       {% endfor %}
     </ul>
-    <ul class="navbar-nav ml-auto">
-      {% if theme_github_url | length > 2 %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ theme_github_url }}" target="_blank" rel="noopener">
-            <span><i class="fab fa-github-square"></i></span>
-          </a>
-        </li>
-      {% endif %}
-      {% if theme_twitter_url | length > 2 %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ theme_twitter_url }}" target="_blank" rel="noopener">
-            <span><i class="fab fa-twitter-square"></i></span>
-          </a>
-        </li>
-      {% endif %}
-    </ul>
   </div>
 </div>
