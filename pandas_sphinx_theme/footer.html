@@ -16,11 +16,13 @@
 
 <div class="footer">
     <div class="container pb-3">
+        {% if theme_open_collective %}
         <div class="row justify-content-center">
             <a href="https://opencollective.com/{{theme_open_collective}}/donate" target="_blank">
               <img src="https://www.spyder-ide.org/static/images/collective.svg" class="center donate" />
             </a>
         </div>
+        {% endif %}
         <div class="row justify-content-center">
             <div class="text-center pb-3">
                  Connect with us on: 
@@ -34,9 +36,11 @@
         </div>
         <div class="row justify-content-center">
               <small>
+                {% if show_copyright %}
                 <div class="text-center">
-                  {% if show_copyright %}&copy;{{ copyright }}{% endif %}
+                  &copy;{{ copyright }}
                 </div>
+                {% endif %}
                 <div class="text-center">
                     {% if theme_show_powered_by|lower == 'true' %}
                     Powered by <a href="http://sphinx-doc.org/">Sphinx {{ sphinx_version }}</a>
