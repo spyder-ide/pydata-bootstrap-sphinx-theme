@@ -16,7 +16,7 @@
 
 <div class="footer">
     <div class="container pb-3">
-        <div class="row justify-content-center pb-3">
+        <div class="row justify-content-center">
             <a href="https://opencollective.com/{{theme_open_collective}}/donate" target="_blank">
               <img src="https://www.spyder-ide.org/static/images/collective.svg" class="center donate" />
             </a>
@@ -24,18 +24,12 @@
         <div class="row justify-content-center">
             <div class="text-center pb-3">
                  Connect with us on: 
-                  {% if theme_github_url %}
-                  <a href="{{theme_github_url}}">Github</a>
+                 {% for footer_link in theme_footer_links%}
+                  {% if loop.index > 1 %}
+                  <span class="pipe-red">|</span>
                   {% endif %}
-                  {% if theme_twitter_url %}
-                  <span class="pipe-red">|</span> <a href="{{theme_twitter_url}}">Twitter</a>
-                  {% endif %}
-                  {% if theme_facebook_url %}
-                  <span class="pipe-red">|</span> <a href="{{theme_facebook_url}}">Facebook</a>
-                  {% endif %}
-                  {% if theme_google_groups_url %}
-                  <span class="pipe-red">|</span> <a href="{{theme_google_groups_url}}">Google Groups</a>
-                  {% endif %}
+                  <a href="{{footer_link.url}}">{{footer_link.name}}</a>
+                {% endfor %}
             </div>
         </div>
         <div class="row justify-content-center">

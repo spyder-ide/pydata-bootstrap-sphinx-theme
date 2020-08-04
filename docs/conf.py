@@ -69,8 +69,16 @@ html_theme_options = {
     "gitter_room": "pydata/pandas",
     "open_collective": "pandas",
     "show_powered_by": True,
-    "github_url": "https://github.com/pandas-dev/pandas",
-    "twitter_url": "https://twitter.com/pandas_dev"
+    "footer_links": [
+        {
+            'url': "https://github.com/pandas-dev/pandas",
+            'name': "GitHub"
+        },
+        {
+            'url': "https://twitter.com/pandas_dev",
+            'name': "Twitter"
+        }
+    ],
 }
 
 html_context = {
