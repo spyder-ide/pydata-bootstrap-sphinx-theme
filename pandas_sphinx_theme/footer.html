@@ -11,22 +11,48 @@
 
 <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
-<footer class="footer">
-  <div class="container">
-    <p>
-      {%- if show_copyright %}
-        {%- if hasdoc('copyright') %}
-          {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}<br/>
-        {%- else %}
-          {% trans copyright=copyright|safe %}&copy; Copyright {{ copyright }}.{% endtrans %}<br/>
-        {%- endif %}
-      {%- endif %}
-      {%- if last_updated %}
-        {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}<br/>
-      {%- endif %}
-      {%- if show_sphinx %}
-        {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}<br/>
-      {%- endif %}
-    </p>
-  </div>
-</footer>
+
+
+
+<div class="footer">
+    <div class="container pb-3">
+        {% if theme_open_collective %}
+        <div class="row justify-content-center">
+            <a href="https://opencollective.com/{{theme_open_collective}}/donate" target="_blank">
+              <img src="https://www.spyder-ide.org/static/images/collective.svg" class="center donate" />
+            </a>
+        </div>
+        {% endif %}
+        <div class="row justify-content-center">
+            <div class="text-center pb-3">
+                 Connect with us on: 
+                 {% for footer_link in theme_footer_links%}
+                  {% if loop.index > 1 %}
+                  <span class="pipe-red">|</span>
+                  {% endif %}
+                  <a href="{{footer_link.url}}">{{footer_link.name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="row justify-content-center">
+              <small>
+                {% if show_copyright %}
+                <div class="text-center">
+                  &copy;{{ copyright }}
+                </div>
+                {% endif %}
+                <div class="text-center">
+                    {% if theme_show_powered_by|lower == 'true' %}
+                    Powered by <a href="http://sphinx-doc.org/">Sphinx {{ sphinx_version }}</a>
+                    {% endif %}
+                    {% if show_source and has_source and sourcename %}
+                      {% if show_copyright or theme_show_powered_by %}<span class="pipe-red">|</span>{% endif %}
+                      <a href="{{ pathto('_sources/' + sourcename, true)|e }}"
+                          rel="nofollow">{{ _('Page source') }}</a>
+                    {% endif %}
+                </div>
+              </small>
+            </div>
+        </div>
+    </div>
+</div>
