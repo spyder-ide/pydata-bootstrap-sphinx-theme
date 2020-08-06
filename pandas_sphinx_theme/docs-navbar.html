@@ -11,9 +11,6 @@
 
   <div id="navbar-menu" class="collapse navbar-collapse">
     <ul id="navbar-main-elements" class="navbar-nav mr-auto">
-      <li class="nav-item">
-          <a class="nav-link" href="{{ pathto('index') }}">Home</a>
-      </li>
       {% for external_link in theme_external_links %}
         <li class="nav-item">
             <a class="nav-link nav-external" href="{{ external_link.url }}">{{ external_link.name }}</a>
