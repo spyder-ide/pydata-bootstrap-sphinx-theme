@@ -39,7 +39,7 @@
 .navbar-nav {
   li a {
     padding: 0 15px;
-
+    outline: none;
     /* line-height: 50px; */
   }
 
@@ -230,14 +230,12 @@
 summary {
   text-transform: uppercase;
   font-size: 0.8rem;
+  outline: none;
 }
 
 #bd-docs-nav .nav-link {
   text-transform: uppercase;
   padding: .5rem 1rem !important;
-}
-
-#bd-docs-nav > summary {
   outline: none;
 }
 
@@ -251,6 +249,7 @@ summary {
     color: rgba(0, 0, 0, 0.65);
     font-size: 0.8rem;
     padding: 0.25rem 0rem 0.25rem 1.2rem;
+    outline: none;
     &:hover {
       color: rgba(0, 0, 0, 0.85);
       text-decoration: none;
@@ -330,6 +329,10 @@ body {
 
 .toc-h4 {
   font-size: 0.65rem;
+}
+
+.toc-entry > .nav-link {
+  outline: none;
 }
 
 .toc-entry > .nav-link.active {
