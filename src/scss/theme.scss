@@ -237,6 +237,10 @@ summary {
   padding: .5rem 1rem !important;
 }
 
+#bd-docs-nav > summary {
+  outline: none;
+}
+
 .bd-sidebar .nav {
   display: block;
 }
