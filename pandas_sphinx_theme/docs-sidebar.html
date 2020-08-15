@@ -12,7 +12,7 @@
   </form>
 </div>
 
-<nav class="bd-links d-none d-md-block d-xl-block" id="bd-docs-nav" aria-label="Main navigation">
+<nav id="bd-docs-nav" class="bd-links d-none d-md-none d-xl-block bd-sidebar" aria-label="Main navigation">
 
   <div class="bd-toc-item active">
   {% set nav = get_nav_object(maxdepth=3) %}
@@ -60,7 +60,7 @@
 
 </nav>
 
-<nav class="d-block d-sm-block d-md-none" id="bd-docs-nav" aria-label="Main navigation">
+<nav class="d-block d-xl-none" aria-label="Main navigation">
     <div class="bd-toc-item active row">
     {% set nav = get_nav_object(maxdepth=3) %}
       <h4 id="topics-header">Topics</h4>

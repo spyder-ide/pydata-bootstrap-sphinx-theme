@@ -1,6 +1,6 @@
 {% set page_toc = get_page_toc_object() %}
 
-<div class="row d-none d-xl-block bd-toc">
+<div class="row d-none d-md-block bd-toc">
     {% include "edit_this_page.html" %}
     {%- if page_toc.children | length > 1 %}
     <div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
@@ -22,7 +22,7 @@
     </nav>
 </div>
 
-<div class="row d-block d-md-none bd-toc nav-bd-toc">
+<div class="row d-block d-md-none">
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-bottom bd-navbar py-1 shadows rounded d-flex justify-content-center" id="navbar-toc">
         <div class="navbar-toggler-item">
             <a class="navbar-toggler btn-outline-default" href="{{ pathto('search') }}"><span class="fas fa-search"></span></a>
