@@ -55,11 +55,11 @@
 
     <div id="doc-content" class="container">
       <div class="row flex-xl-nowrap">
-          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+          <div class="col-12 col-md-9 col-xl-2 pl-md-5">
               {%- include "docs-sidebar.html" %}
           </div>
 
-          <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
+          <main class="col-12 col-md-9 col-xl-8 py-2 py-md-3 pl-md-5 pr-md-5 bd-content" role="main">
               <div>
                 {% block body %} {% endblock %}
               </div>
@@ -70,7 +70,7 @@
               {% endif %}
           </main>
 
-          <div class="col-xl-2">
+          <div class="col-md-3 col-xl-2">
               {% if not (meta is not none and 'notoc' in meta) %}
                   {%- include "docs-toc.html" %}
               {% endif %}
