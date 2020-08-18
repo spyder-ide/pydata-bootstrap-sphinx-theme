@@ -79,6 +79,7 @@ html_theme_options = {
             'name': "Twitter"
         }
     ],
+    "page_toc_limit": 1,
 }
 
 html_context = {

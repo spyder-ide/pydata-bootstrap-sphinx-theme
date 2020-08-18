@@ -11,7 +11,7 @@
         {% for item in page_toc.children recursive %}
             <li class="nav-item toc-entry toc-h{{ loop.depth + 1 }}">
                 <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-            {%- if item.children -%}
+            {%- if item.children and loop.depth <= theme_page_toc_limit -%}
                 <ul class="nav section-nav flex-column">
                     {{ loop(item.children) }}
                 </ul>
@@ -44,7 +44,7 @@
             {% for item in page_toc.children recursive %}
                 <li class="nav-item toc-entry toc-h{{ loop.depth + 1 }}" data-target="#bd-toc-nav-small" data-toggle="collapse">
                     <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-                {%- if item.children -%}
+                {%- if item.children and loop.depth <= theme_page_toc_limit -%}
                     <ul class="nav section-nav flex-column">
                         {{ loop(item.children) }}
                     </ul>
