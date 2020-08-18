@@ -1,5 +1,11 @@
 @import './sphinx-bootstrap';
 
+$main-color-red: #ee1c24;
+
+#open_chat {
+  background-color: $main-color-red;
+}
+
 .gitter-chat-embed{
   z-index: 1031;
 }
@@ -45,7 +51,7 @@
 
   > .active > .nav-link {
     font-weight: 600;
-    color: #ee1c24 !important;
+    color: $main-color-red !important;
   }
 }
 
@@ -65,8 +71,8 @@
 }
 
 .navbar-toggler:hover {
-  border: 1px solid #ee1c24;
-  color: #ee1c24;
+  border: 1px solid $main-color-red;
+  color: $main-color-red;
 }
 
 .navbar-light .navbar-toggler-icon:hover{
@@ -262,8 +268,8 @@ summary {
     > a,
     &:hover > a {
       font-weight: 600;
-      color: #ee1c24;
-      border-left: 2px solid #ee1c24;
+      color: $main-color-red;
+      border-left: 2px solid $main-color-red;
 
       /* adjusted from original
         color: rgba(0, 0, 0, 0.85);
@@ -272,7 +278,7 @@ summary {
 
     summary {
       font-weight: 600;
-      color: #ee1c24;
+      color: $main-color-red;
     }
   }
 
@@ -338,9 +344,9 @@ body {
 
 .toc-entry > .nav-link.active {
   font-weight: 600;
-  color: #ee1c24;
+  color: $main-color-red;
   background-color: transparent;
-  border-left: 2px solid #ee1c24;
+  border-left: 2px solid $main-color-red;
 }
 
 .nav-link:hover {
