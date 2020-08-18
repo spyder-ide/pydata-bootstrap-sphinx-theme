@@ -231,11 +231,12 @@ summary {
   text-transform: uppercase;
   font-size: 0.8rem;
   outline: none;
+  padding: 0.5rem -0rem;
 }
 
 #bd-docs-nav .nav-link {
   text-transform: uppercase;
-  padding: .5rem 1rem !important;
+  padding: .5rem 1.1rem !important;
   outline: none;
 }
 
@@ -262,7 +263,7 @@ summary {
     &:hover > a {
       font-weight: 600;
       color: #ee1c24;
-      border-left: 1px solid #ee1c24;
+      border-left: 2px solid #ee1c24;
 
       /* adjusted from original
         color: rgba(0, 0, 0, 0.85);
@@ -308,7 +309,7 @@ h6::before {
   display: block;
   content: '';
   height: 80px;
-  margin: -80px 0 0;
+  margin: -70px 0 0;
 }
 
 /* add padding to body to avid overlap with navbar   */
@@ -421,19 +422,19 @@ h3 {
 }
 
 h4 {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 h6 {
-  font-size: 1.2rem;
+  font-size: .75rem;
 }
 
 h2, h3, h4, h5, h6 {
-  margin-top: 0.3em;
+  margin-bottom: 0.3em !important;
 }
 
 /* Img Styling */
@@ -489,4 +490,17 @@ div {
 /* Select sidebar wrapping */
 #small-dropdown, #small-dropdown option {
   width: 90%;
+}
+
+
+/* Paragraphs */
+p {
+  margin-bottom: 10px !important;
+}
+
+/*Highlight sections*/
+div.highlight{
+  pre {
+    margin: 10px 0 30px 0;
+  }
 }

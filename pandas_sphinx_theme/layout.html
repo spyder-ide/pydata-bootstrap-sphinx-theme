@@ -46,7 +46,7 @@
 {%- block content %}
     {% if theme_alert_message %}
     <div class="alert-danger text-center" role="alert">
-      <strong>{{theme_alert_message | safe}}</strong>
+      {{theme_alert_message | safe}}
     </div>
     {% endif %}
     <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar py-0" id="navbar-main">
