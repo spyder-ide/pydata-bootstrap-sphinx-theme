@@ -102,3 +102,6 @@ ENV/
 .mypy_cache/
 
 node_modules/
+
+# To avoid merge conflicts
+package-lock.json

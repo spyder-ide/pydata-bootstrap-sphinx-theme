@@ -1,3 +1,72 @@
+/* Styles ported from the Spyder IDE main website stylesheet */
+
+$font-stack: Raleway, Arial, sans-serif;
+$primary-color: #d50000;
+
+body {
+  color: rgb(78, 78, 78);
+  font-family: $font-stack;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+a {
+  color: $primary-color;
+  transition: 0.5s;
+}
+
+a:hover, a:focus, a:active {
+  color: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+  font-family: $font-stack;
+  margin-bottom: 30px;
+}
+
+.btn {
+  border-radius: 100px;
+  font-family: $font-stack;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-right: 4px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.form-control {
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  font-weight: 300;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#open_chat {
+  background-color: $primary-color;
+  font-weight: bold;
+}
+
+.pipe-red {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+/* Custom styles specific to the theme */
+
 #doc-content {
     font-size: 15px;
 }
@@ -5,10 +74,6 @@
 .form-control {
     font-size: 90%;
     height: auto;
-}
-
-.btn {
-    margin-bottom: 0px;
 }
 
 @media (min-width: 1200px) {
@@ -38,13 +103,13 @@
 .guilabel,
 .menuselection {
     font-family: Arial, sans-serif;
-    font-weight: 150;
+    font-weight: 200;
 }
 
-#navbar-menu{
-  text-transform: uppercase;
+#navbar-menu {
   font-size: 12px;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .navbar-light {
