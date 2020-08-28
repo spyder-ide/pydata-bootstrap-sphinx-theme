@@ -115,3 +115,18 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-light {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.589) !important;
 }
+
+div.prev-next-bottom {
+  & a.prev-next-link {
+    border: 0;
+    text-transform: uppercase;
+
+    &:hover, &:active, &:focus {
+      color: rgba(0,0,0,.85);
+    }
+
+    &::before, &::after {
+      content: none;
+    }
+  }
+}
