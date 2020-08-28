@@ -119,10 +119,11 @@ h1, h2, h3, h4, h5, h6 {
 div.prev-next-bottom {
   & a.prev-next-link {
     border: 0;
+    color: $primary-color;
     text-transform: uppercase;
 
     &:hover, &:active, &:focus {
-      color: rgba(0,0,0,.85);
+      color: $primary-color;
     }
 
     &::before, &::after {
