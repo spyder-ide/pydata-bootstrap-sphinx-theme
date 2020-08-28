@@ -1,6 +1,6 @@
 
 <div class="d-none d-xl-block">
-  {%- if sidebars != None %}
+  {%- if sidebars %}
     {%- for sidebartemplate in sidebars %}
     {%- include sidebartemplate %}
     {%- endfor %}
@@ -66,7 +66,7 @@
 </nav>
 
 <nav class="d-block d-xl-none" aria-label="Main navigation">
-    {%- if sidebars != None %}
+    {%- if sidebars %}
         {%- for sidebartemplate in sidebars %}
           <div class="bd-toc-item active row px-3">
             {%- include sidebartemplate %}
