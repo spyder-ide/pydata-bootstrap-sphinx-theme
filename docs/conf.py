@@ -80,6 +80,7 @@ html_theme_options = {
         }
     ],
     "page_toc_limit": 1,
+    "logo_link": None,
 }
 
 html_context = {
