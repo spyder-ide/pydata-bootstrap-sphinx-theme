@@ -47,7 +47,7 @@ $(document).ready(() => {
   var selection_length = select_options.filter(`[value="${current_page}"]`).length;
   var empty_selection_length = select_options.filter('[value=""]').length;
   if(select_options.length && (selection_length || empty_selection_length)) {
-    select_options.removeAttr('selected').filter('[value=""]').attr('selected', true);
+    select_options.removeAttr('selected').filter('[value=""]').prop('selected', true);
   } else {
     $('#small-dropdown').hide();
     $('#topics-header').hide();
