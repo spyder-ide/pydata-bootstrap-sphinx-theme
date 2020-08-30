@@ -1,5 +1,10 @@
 
 <div class="d-none d-xl-block">
+  {%- if sidebars %}
+    {%- for sidebartemplate in sidebars %}
+    {%- include sidebartemplate %}
+    {%- endfor %}
+  {%- endif %}
   <form class="bd-search d-flex align-items-center" action="{{ pathto('search') }}" method="get">
     <div class="input-group">
       <input type="search" class="form-control" name="q" id="search-input" placeholder="Search ..." aria-label="Search the docs ..." autocomplete="off" >
@@ -61,7 +66,14 @@
 </nav>
 
 <nav class="d-block d-xl-none" aria-label="Main navigation">
-    <div class="bd-toc-item active row">
+    {%- if sidebars %}
+        {%- for sidebartemplate in sidebars %}
+          <div class="bd-toc-item active row px-3">
+            {%- include sidebartemplate %}
+          </div>
+        {%- endfor %}
+    {%- endif %}
+    <div class="bd-toc-item active row px-3">
     {% set nav = get_nav_object(maxdepth=3) %}
       <h4 id="topics-header">Topics</h4>
       <select id="small-dropdown" class="nav bd-sidenav">

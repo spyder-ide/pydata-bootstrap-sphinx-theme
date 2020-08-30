@@ -43,11 +43,9 @@ $(document).ready(() => {
     keyboardListener = true;
   }
   var select_options = $('#small-dropdown option');
-  var current_page = window.location.pathname.replace("/", "") + window.location.search;
-  var selection_length = select_options.filter(`[value="${current_page}"]`).length;
-  var empty_selection_length = select_options.filter('[value=""]').length;
-  if(select_options.length && (selection_length || empty_selection_length)) {
-    select_options.removeAttr('selected').filter('[value=""]').attr('selected', true);
+  var empty_selection = select_options.filter('[value=""]');
+  if(select_options.length && empty_selection.length) {
+    empty_selection.prop('selected', true);
   } else {
     $('#small-dropdown').hide();
     $('#topics-header').hide();
@@ -55,12 +53,8 @@ $(document).ready(() => {
 });
 
 // Based on https://stackoverflow.com/a/37796085
-$('#small-dropdown').click(function() {
-  var open = $(this).data('isopen');
-  if(open && $(this).val()) {
+$('#small-dropdown').change(function() {
+  if($(this).val()) {
     window.location.href = $(this).val();
   }
-  //Set 'isopen' to the opposite so next time when select box is clicked
-  //it won't trigger the redirection to a new page
-  $(this).data('isopen', !open);
 });
