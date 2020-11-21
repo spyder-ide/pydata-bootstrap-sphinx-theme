@@ -2,6 +2,8 @@
 
 $font-stack: Raleway, Arial, sans-serif;
 $primary-color: #d50000;
+$pipe-color: #ee1c24;
+$fg-alt-color: #333;
 
 body {
   color: rgb(78, 78, 78);
@@ -61,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pipe-red {
-  color: $primary-color;
+  color: $pipe-color;
   font-weight: bold;
 }
 
@@ -85,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
     line-height: 1.2;
     font-size: 16px;
-    background-color: #414042;
+    background-color: $fg-alt-color;
     color: white;
     a {
         color: white;
@@ -114,6 +116,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-light {
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.589) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $fg-alt-color;
 }
 
 div.prev-next-bottom {
