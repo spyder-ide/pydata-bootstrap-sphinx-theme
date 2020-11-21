@@ -60,6 +60,10 @@ html_logo = '_static/pandas.svg'
 html_theme_options = {
     "external_links": [
         {
+            "url": "/",
+            "name": "Docs"
+        },
+        {
             'url': "https://pandas.pydata.org/pandas-docs/stable/",
             "name": "Pandas Docs"
         }

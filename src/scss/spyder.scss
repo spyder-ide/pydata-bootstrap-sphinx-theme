@@ -131,6 +131,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-light .navbar-nav .nav-link {
   color: $fg-alt-color;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+
+.navbar-nav .nav-link-active {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link-active::after {
+  background: $primary-color;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 100%;
 }
 
 div.prev-next-bottom {
