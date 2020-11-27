@@ -138,11 +138,11 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.navbar-nav .nav-link-active {
+.navbar-nav .nav-link-active-section {
   font-weight: bold;
 }
 
-.navbar-nav .nav-link-active::after {
+.navbar-nav .nav-link-active-page::after {
   background: $primary-color;
   bottom: 0;
   content: "";
