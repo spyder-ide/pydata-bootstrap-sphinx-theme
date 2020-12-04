@@ -40,8 +40,10 @@ b, strong {
 }
 
 code, pre, samp {
-  color: $mono-color;
+  background-color: $bg-alt-color;
+  color: $accent-color;
   font-family: $font-stack-mono;
+  padding: 0.2em 0.3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
