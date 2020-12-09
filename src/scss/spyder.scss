@@ -1,12 +1,22 @@
-/* Styles ported from the Spyder IDE main website stylesheet */
+/* Spyder-specific theme customization */
 
 $font-stack: Raleway, Arial, sans-serif;
-$primary-color: #d50000;
-$pipe-color: #ee1c24;
+$font-stack-mono: Inconsolata, Consolas, "Liberation Mono", monospace;
+
+$body-color: #212121;
+$accent-color: #d50000;
+$accent-dark-color: #8c0000;
+$accent-alt-color: #1c4489;
+$bg-color: #ffffff;
+$bg-alt-color: #ededed;
 $fg-alt-color: #333;
+$mono-color: #e83e8c;
+
+
+/* Define styles for basic reST elements */
 
 body {
-  color: rgb(78, 78, 78);
+  color: $body-color;
   font-family: $font-stack;
   font-size: 18px;
   font-weight: 300;
@@ -15,19 +25,61 @@ body {
 }
 
 a {
-  color: $primary-color;
+  color: $accent-color;
   transition: 0.5s;
 }
 
 a:hover, a:focus, a:active {
-  color: $primary-color;
+  color: $accent-color;
+}
+
+b, strong {
+  color: $body-color;
+  font-family: $font-stack;
+  font-weight: 600;
+}
+
+code, pre, samp {
+  background-color: $bg-alt-color;
+  color: $accent-color;
+  font-family: $font-stack-mono;
+  padding: 0.2em 0.3em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000000;
+  color: $body-color;
   font-family: $font-stack;
   margin-bottom: 30px;
 }
+
+kbd, kbd kbd {
+  color: $body-color;
+  font-family: $font-stack-mono;
+  font-weight: normal;
+}
+
+kbd {
+  background-color: $bg-color;
+  padding: 0rem 0.1rem;
+}
+
+kbd kbd {
+  background-color: $bg-alt-color;
+  padding: 0.2rem 0.4rem;
+}
+
+.guilabel,
+.menuselection {
+  background-color: $bg-alt-color;
+  border-radius: 0.2rem;
+  color: $accent-alt-color;
+  font-family: $font-stack;
+  font-weight: normal;
+  padding: 0.1rem 0.2rem;
+}
+
+
+/* Styles ported from the Spyder IDE main website stylesheet */
 
 .btn {
   border-radius: 100px;
@@ -59,12 +111,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #open_chat {
-  background-color: $primary-color;
+  background-color: $accent-color;
   font-weight: bold;
 }
 
 .pipe-red {
-  color: $pipe-color;
+  color: $accent-color;
   font-weight: bold;
 }
 
@@ -143,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-nav .nav-link-active-page::after {
-  background: $primary-color;
+  background: $accent-color;
   bottom: 0;
   content: "";
   display: block;
@@ -155,11 +207,11 @@ h1, h2, h3, h4, h5, h6 {
 div.prev-next-bottom {
   & a.prev-next-link {
     border: 0;
-    color: $primary-color;
+    color: $accent-color;
     text-transform: uppercase;
 
     &:hover, &:active, &:focus {
-      color: $primary-color;
+      color: $accent-color;
     }
 
     &::before, &::after {
