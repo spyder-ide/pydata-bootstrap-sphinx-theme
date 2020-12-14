@@ -68,13 +68,12 @@ kbd kbd {
   padding: 0.2rem 0.4rem;
 }
 
-.guilabel,
-.menuselection {
+.guilabel, .menuselection {
   background-color: $bg-alt-color;
   border-radius: 0.2rem;
   color: $accent-alt-color;
-  font-family: $font-stack;
-  font-weight: normal;
+  font-family: Arial, sans-serif;
+  font-weight: 200;
   padding: 0.1rem 0.2rem;
 }
 
@@ -120,45 +119,25 @@ kbd kbd {
   font-weight: bold;
 }
 
-/* Custom styles specific to the theme */
 
-#doc-content {
-    font-size: 15px;
-}
-
-.form-control {
-    font-size: 90%;
-    height: auto;
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1280px;
-    }
-}
+/* Styling for the common navbar and footer */
 
 .footer {
-    line-height: 1.2;
-    font-size: 16px;
-    background-color: $fg-alt-color;
+  line-height: 1.2;
+  font-size: 16px;
+  background-color: $fg-alt-color;
+  color: white;
+  a {
     color: white;
-    a {
-        color: white;
-        font-weight: bold;
-    }
-    .text-center {
-        margin: 0px;
-    }
+    font-weight: bold;
+  }
+  .text-center {
+    margin: 0px;
+  }
 }
 
 .donate {
-    width: 100%;
-}
-
-.guilabel,
-.menuselection {
-    font-family: Arial, sans-serif;
-    font-weight: 200;
+  width: 100%;
 }
 
 .navbar > .container {
@@ -202,6 +181,24 @@ kbd kbd {
   height: 2px;
   position: absolute;
   width: 100%;
+}
+
+
+/* Custom styles specific to the theme */
+
+#doc-content {
+    font-size: 15px;
+}
+
+.form-control {
+  font-size: 90%;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1280px;
+  }
 }
 
 div.prev-next-bottom {
