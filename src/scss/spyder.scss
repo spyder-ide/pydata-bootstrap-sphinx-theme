@@ -3,20 +3,20 @@
 $font-stack: Raleway, Arial, sans-serif;
 $font-stack-mono: Inconsolata, Consolas, "Liberation Mono", monospace;
 
-$body-color: #212121;
 $accent-color: #d50000;
 $accent-dark-color: #8c0000;
 $accent-alt-color: #1c4489;
 $bg-color: #ffffff;
 $bg-alt-color: #ededed;
-$fg-alt-color: #333;
-$mono-color: #e83e8c;
+$fg-color: #333333;
+$fg-alt-dark-color: #000000;
+$fg-alt-light-color: rgba(0, 0, 0, 0.65);
 
 
 /* Define styles for basic reST elements */
 
 body {
-  color: $body-color;
+  color: $fg-color;
   font-family: $font-stack;
   font-size: 18px;
   font-weight: 300;
@@ -34,7 +34,7 @@ a:hover, a:focus, a:active {
 }
 
 b, strong {
-  color: $body-color;
+  color: $fg-color;
   font-family: $font-stack;
   font-weight: 600;
 }
@@ -47,13 +47,13 @@ code, pre, samp {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $body-color;
+  color: $fg-color;
   font-family: $font-stack;
   margin-bottom: 30px;
 }
 
 kbd, kbd kbd {
-  color: $body-color;
+  color: $fg-color;
   font-family: $font-stack-mono;
   font-weight: normal;
 }
@@ -68,13 +68,12 @@ kbd kbd {
   padding: 0.2rem 0.4rem;
 }
 
-.guilabel,
-.menuselection {
+.guilabel, .menuselection {
   background-color: $bg-alt-color;
   border-radius: 0.2rem;
   color: $accent-alt-color;
-  font-family: $font-stack;
-  font-weight: normal;
+  font-family: Arial, sans-serif;
+  font-weight: 200;
   padding: 0.1rem 0.2rem;
 }
 
@@ -120,45 +119,25 @@ kbd kbd {
   font-weight: bold;
 }
 
-/* Custom styles specific to the theme */
 
-#doc-content {
-    font-size: 15px;
-}
-
-.form-control {
-    font-size: 90%;
-    height: auto;
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1280px;
-    }
-}
+/* Styling for the common navbar and footer */
 
 .footer {
-    line-height: 1.2;
-    font-size: 16px;
-    background-color: $fg-alt-color;
+  line-height: 1.2;
+  font-size: 16px;
+  background-color: $fg-color;
+  color: white;
+  a {
     color: white;
-    a {
-        color: white;
-        font-weight: bold;
-    }
-    .text-center {
-        margin: 0px;
-    }
+    font-weight: bold;
+  }
+  .text-center {
+    margin: 0px;
+  }
 }
 
 .donate {
-    width: 100%;
-}
-
-.guilabel,
-.menuselection {
-    font-family: Arial, sans-serif;
-    font-weight: 200;
+  width: 100%;
 }
 
 .navbar > .container {
@@ -182,7 +161,7 @@ kbd kbd {
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: $fg-alt-color;
+  color: $fg-color;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   padding-left: 0;
@@ -204,6 +183,24 @@ kbd kbd {
   width: 100%;
 }
 
+
+/* Custom styles specific to the theme */
+
+#doc-content {
+    font-size: 15px;
+}
+
+.form-control {
+  font-size: 90%;
+  height: auto;
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1280px;
+  }
+}
+
 div.prev-next-bottom {
   & a.prev-next-link {
     border: 0;
@@ -218,4 +215,25 @@ div.prev-next-bottom {
       content: none;
     }
   }
+}
+
+
+/* Harmonize grays to common color palette */
+
+.bd-sidebar .nav > li > a,
+.bd-sidebar .nav > summary,
+.btn-outline-danger,
+div.editthispage a {
+  color: $fg-color;
+}
+
+.toc-entry a {
+  color: $fg-alt-light-color;
+}
+
+.bd-sidebar .nav > li > a:hover,
+.bd-sidebar .nav > summary:hover,
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: $fg-alt-dark-color;
 }
