@@ -3,12 +3,12 @@
 This is a bespoke fork of the [Pandas Sphinx theme](https://github.com/pandas-dev/pandas-sphinx-theme) use for the various Spyder documentation sites.
 All development ultimately takes place in the ``develop_spyder`` branch.
 While the nominal eventual goal is to merge commonly useful changes downstream and make the rest configurable, the initial choices made after forking the theme will likely make that take an unfeasible amount of effort.
-Nevertheless, any contributions toward that goal are much appreciated.
+However, any contributions toward that goal are much appreciated.
 
-If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend seeking out a beginner tutorial; if you are already are experienced with it, most of this guide will already be familiar to you.
-However, the guide should fill you in on pretty much all the parts you need to know, so read on.
-Thanks!
+If you're not comfortable with at least the basics of ``git`` and GitHub, we recommend reading beginner tutorials such as [GitHub's Git Guide](https://github.com/git-guides/), its [introduction to basic Git commands](https://guides.github.com/introduction/git-handbook/#basic-git) and its [guide to the fork workflow](https://guides.github.com/activities/forking/), or (if you prefer) their [video equivalents](https://www.youtube.com/githubguides).
+However, this contributing guide should fill you in on most of the basics you need to know.
 
+Let us know if you have any further questions, and we look forward to your contributions!
 
 
 ## Reporting Issues
@@ -18,7 +18,6 @@ Want a new feature?
 [Open](https://github.com/spyder-ide/spyder-docs-sphinx-theme/issues/new/choose) an [issue](https://github.com/spyder-ide/spyder-docs-sphinx-theme/issues)!
 Make sure to describe the bug or feature in detail, with reproducible examples and references if possible, what you are looking to have fixed/added.
 While we can't promise we'll fix everything you might find, we'll certainly take it into consideration, and typically welcome pull requests to resolve accepted issues.
-Thanks!
 
 
 
@@ -144,4 +143,4 @@ git push -u origin <FEATURE-BRANCH>
 
 Finally, create a pull request to the [spyder-ide/spyder-docs-sphinx-theme repository](https://github.com/spyder-ide/spyder-docs-sphinx-theme/) on Github.
 
-Thanks, and we look forward to your generous contributions!
+Thanks for taking the time to read and follow this guide, and we look forward to your contributions!
