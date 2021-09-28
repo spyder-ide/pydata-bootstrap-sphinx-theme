@@ -22,5 +22,5 @@ setup(
     include_package_data=True,
     # See http://www.sphinx-doc.org/en/stable/theming.html#distribute-your-theme-as-a-python-package
     entry_points={"sphinx.html_themes": ["pandas_sphinx_theme = pandas_sphinx_theme"]},
-    install_requires=["sphinx"],
+    install_requires=["sphinx>=3,<4"],
 )
